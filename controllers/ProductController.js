@@ -30,6 +30,12 @@ class ProductController{
         const result = await Product.findByPk(id);
         return result;
     }
+    async updateProduct(id, data){
+        
+    }
+    async deleteProduct(id, data){
+        
+    }
 }
 
 

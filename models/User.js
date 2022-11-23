@@ -3,7 +3,7 @@ const db = require("../db");
 
 const User = db.define("user", {
     id:{
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncremente: true,
         allowNull: false

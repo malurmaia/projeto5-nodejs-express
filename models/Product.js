@@ -3,7 +3,7 @@ const db = require("../db");
 
 const Product= db.define("product", {
     id:{
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncremente: true,
         allowNull: false
