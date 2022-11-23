@@ -1,9 +1,13 @@
+const Category = require('../models/Category');
+
 class CategoryController{
-    getCategory(){
-        return
+    async getCategories(params){
+        const result = await Category.findAll();
+        return result;
     }
-    getCategory(){
-        
+   async getCategory(id){
+        const result = await Category.findByPk(id);
+        return result;
     }
 }
 

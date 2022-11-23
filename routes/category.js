@@ -4,11 +4,13 @@ const CategoryController = require('../controllers/CategoryController')
 
 const categoryCtrl = new CategoryController();
 router.get("/",async (req, res) => {
-    res.send('Olá mundo user!')
+    const result = await categoryCtrl.getCategories();
+    res.send(result)
 
 });
 router.get("/:id",async (req, res) => {
-    res.send('Olá mundo category!')
+    const result = await categoryCtrl.getCategory();
+    res.send(result)
 
 });
 router.post("/:id",async (req, res) => {

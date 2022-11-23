@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../controllers/UserController');
 const ProductController = require ('../controllers/ProductController');
 
 productCtrl = new ProductController();
 
 router.get("/",async (req, res) => {
-    const userCtrl = new User();
-    res.send('Olá mundo product!')
+    const result= await productCtrl.getProducts(req.query);
+    res.send(result)
 
 });
 router.get("/:id",async (req, res) => {
