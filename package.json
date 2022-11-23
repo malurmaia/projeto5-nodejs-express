@@ -1,0 +1,29 @@
+{
+  "name": "projeto5-nodejs-express",
+  "version": "1.0.0",
+  "description": "Primeiro projeto de express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon --ext *",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malurmaia/projeto5-nodejs-express.git"
+  },
+  "author": "Maria Luisa Ribeiro Maia",
+  "license": "MIT ",
+  "bugs": {
+    "url": "https://github.com/malurmaia/projeto5-nodejs-express/issues"
+  },
+  "homepage": "https://github.com/malurmaia/projeto5-nodejs-express#readme",
+  "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "express": "^4.18.2",
+    "livereload": "^0.9.3",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.25.8"
+  }
+}
