@@ -1,22 +1,13 @@
-const express = require('express');
-const db = require('./db.js')
+const express = require("express");
 const app = express();
+const userRoutes = require('./Routes/user.routes');
+const productRoutes = require('./Routes/product.routes');
 
-require("dotenv").config();
+app.use(express.json());
+app.get("/", (req, res)=>{
+    res.end("")
+});
 
-db.sync(()=> console.log("banco rodando"))
-// ROTAS //
- const user = require('./routes/user');
- const auth = require('./routes/auth');
- const product = require('./routes/product');
- const category = require('./routes/category');
-
-
-app.use("/user", user);
-app.use("/auth", auth);
-app.use("/product", product);
-app.use("/category", category);
-
-app.listen(process.env.PORT, function() {
-    console.log("app rodando")
-})
+app.use("/user-api", userRoutes);
+app.use("/product", productRoutes );
+app.listen(3000,()=>console.log("O servidor está rolando"));
